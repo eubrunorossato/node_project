@@ -21,10 +21,8 @@ app.use(bodyparser.urlencoded({extended: true}))
 app.use(expressValidator())
 
 consign()
-    .include('./app/views')
     .include('./app/controllers')
     .include('./app/routes')
-    .include('./app/public')
     .include('./app/models')
     .into(app)
 
